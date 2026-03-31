@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Utility - CGPA Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>CGPA Calculator</h1>
+        <button onclick="window.location.href='dashboard.html'" class="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+    </header>
+    <main>
+        <div class="cgpa-container">
+            <div class="card">
+                <h2>SGPA Calculator</h2>
+                <div id="courses-container">
+                    <div class="course">
+                        <select class="grade">
+                            <option value="">Grade</option>
+                            <option value="10">O (10)</option>
+                            <option value="9">A+ (9)</option>
+                            <option value="8">A (8)</option>
+                            <option value="7">B+ (7)</option>
+                            <option value="6">B (6)</option>
+                            <option value="5">C (5)</option>
+                            <option value="4">D (4)</option>
+                            <option value="0">F (0)</option>
+                        </select>
+                        <input type="number" class="credit" placeholder="Credit" min="1" max="10">
+                        <button class="remove-course" onclick="removeCourse(this)">×</button>
+                    </div>
+                </div>
+                <button id="add-course" class="add-btn"><i class="fas fa-plus"></i> Add Course</button>
+                <button id="calculate-sgpa" class="calculate-btn">Calculate SGPA</button>
+                <div id="sgpa-result" class="result"></div>
+            </div>
+            <div class="card">
+                <h2>Overall CGPA Calculator</h2>
+                <div id="semesters-container">
+                    <div class="semester-input">
+                        <input type="number" class="sgpa-input" placeholder="SGPA" min="0" max="10" step="0.01">
+                        <button class="remove-semester" onclick="removeSemester(this)">×</button>
+                    </div>
+                </div>
+                <button id="add-semester" class="add-btn"><i class="fas fa-plus"></i> Add Semester</button>
+                <button id="calculate-cgpa" class="calculate-btn">Calculate CGPA</button>
+                <div id="cgpa-result" class="result"></div>
+                <div id="performance-message" class="message"></div>
+            </div>
+        </div>
+        <button class="history-toggle" id="cgpa-history-toggle">
+            <i class="fas fa-history"></i>
+        </button>
+        <div class="history-drawer" id="cgpa-history-drawer">
+            <div class="history-header">
+                <h3>CGPA History</h3>
+                <button class="close-drawer" id="cgpa-close-drawer">×</button>
+            </div>
+            <div id="cgpa-history-list"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

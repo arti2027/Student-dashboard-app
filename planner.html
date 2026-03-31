@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Utility - Daily Planner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Daily Planner</h1>
+        <button onclick="window.location.href='dashboard.html'" class="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+    </header>
+    <main>
+        <div class="planner-container">
+            <div class="card">
+                <h2><i class="fas fa-plus-circle"></i> Add New Task</h2>
+                <div class="task-input-container">
+                    <input type="text" id="task-input" placeholder="Enter your task..." maxlength="100">
+                    <button id="add-task-btn" class="add-task-btn">
+                        <i class="fas fa-plus"></i> Add Task
+                    </button>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2><i class="fas fa-tasks"></i> Today's Tasks</h2>
+                <div id="tasks-list" class="tasks-list">
+                    <!-- Tasks will be dynamically added here -->
+                </div>
+                <div id="empty-state" class="empty-state">
+                    <i class="fas fa-clipboard-list"></i>
+                    <p>No tasks yet! Add your first task above.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2><i class="fas fa-chart-line"></i> Progress</h2>
+                <div class="progress-container">
+                    <div class="progress-stats">
+                        <div class="stat">
+                            <span class="stat-number" id="total-tasks">0</span>
+                            <span class="stat-label">Total Tasks</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="completed-tasks">0</span>
+                            <span class="stat-label">Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number" id="completion-rate">0%</span>
+                            <span class="stat-label">Completion Rate</span>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Celebration overlay -->
+        <div id="celebration-overlay" class="celebration-overlay">
+            <div class="celebration-content">
+                <div class="celebration-stickers">
+                    <div class="sticker">🎉</div>
+                    <div class="sticker">⭐</div>
+                    <div class="sticker">✨</div>
+                    <div class="sticker">🎊</div>
+                    <div class="sticker">🏆</div>
+                    <div class="sticker">💯</div>
+                </div>
+                <h3>Awesome! Task Completed! 🎉</h3>
+                <p>Keep up the great work!</p>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

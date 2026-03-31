@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Utility - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Student Utility Dashboard</h1>
+        <button id="logout-btn" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </header>
+    <main>
+        <div class="welcome-section">
+            <div class="welcome-card">
+                <div class="profile-info">
+                    <div class="avatar">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="user-details">
+                        <h2 id="user-greeting">Welcome back!</h2>
+                        <p id="user-name">Student</p>
+                    </div>
+                </div>
+                <div class="motivational-quote">
+                    <p id="daily-quote">"Keep learning, keep growing! 🌟"</p>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-container">
+            <div class="card dashboard-card" onclick="window.location.href='calculator.html'">
+                <i class="fas fa-calculator"></i>
+                <h3>Calculator</h3>
+                <p>Perform basic calculations</p>
+            </div>
+            <div class="card dashboard-card" onclick="window.location.href='cgpa.html'">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>CGPA Calculator</h3>
+                <p>Calculate your academic performance</p>
+            </div>
+            <div class="card dashboard-card" onclick="window.location.href='planner.html'">
+                <i class="fas fa-calendar-check"></i>
+                <h3>Daily Planner</h3>
+                <p>Organize your daily tasks</p>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

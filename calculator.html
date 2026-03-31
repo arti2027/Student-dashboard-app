@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Utility - Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Calculator</h1>
+        <button onclick="window.location.href='dashboard.html'" class="back-btn"><i class="fas fa-arrow-left"></i> Back</button>
+    </header>
+    <main class="calculator-main">
+        <div class="calculator-container">
+            <div class="calculator">
+                <div class="display">
+                    <input type="text" id="display" readonly>
+                </div>
+                <div class="buttons">
+                    <button class="btn clear" onclick="clearDisplay()">C</button>
+                    <button class="btn delete" onclick="deleteLast()">⌫</button>
+                    <button class="btn operator" onclick="appendToDisplay('/')">/</button>
+                    <button class="btn operator" onclick="appendToDisplay('*')">×</button>
+                    <button class="btn number" onclick="appendToDisplay('7')">7</button>
+                    <button class="btn number" onclick="appendToDisplay('8')">8</button>
+                    <button class="btn number" onclick="appendToDisplay('9')">9</button>
+                    <button class="btn operator" onclick="appendToDisplay('-')">-</button>
+                    <button class="btn number" onclick="appendToDisplay('4')">4</button>
+                    <button class="btn number" onclick="appendToDisplay('5')">5</button>
+                    <button class="btn number" onclick="appendToDisplay('6')">6</button>
+                    <button class="btn operator" onclick="appendToDisplay('+')">+</button>
+                    <button class="btn number" onclick="appendToDisplay('1')">1</button>
+                    <button class="btn number" onclick="appendToDisplay('2')">2</button>
+                    <button class="btn number" onclick="appendToDisplay('3')">3</button>
+                    <button class="btn equals" onclick="calculate()">=</button>
+                    <button class="btn number zero" onclick="appendToDisplay('0')">0</button>
+                    <button class="btn number" onclick="appendToDisplay('.')">.</button>
+                </div>
+            </div>
+        </div>
+        <button class="history-toggle" id="history-toggle">
+            <i class="fas fa-history"></i>
+        </button>
+        <div class="history-drawer" id="history-drawer">
+            <div class="history-header">
+                <h3>Calculation History</h3>
+                <button class="close-drawer" id="close-drawer">×</button>
+            </div>
+            <div id="calculator-history-list"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
